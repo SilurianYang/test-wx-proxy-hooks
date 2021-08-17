@@ -18,6 +18,7 @@
 			};
 		},
 		created(){
+			console.log(this)
 			console.log('comtest1----created')
 		},
 		beforeMount(){

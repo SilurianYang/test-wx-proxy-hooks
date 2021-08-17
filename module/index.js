@@ -23,14 +23,13 @@ class Minxins2 {
 			beforeCreate() {
 				const pluginMark = 'HHYANG.CN@SDSD';
 				voidFun(pluginMark);
-	
 				const pageType = this.$options.mpType;
 	            let isProxy =true;
 				if (pageType === 'component') {
-					isProxy= assertParentChild(appletProxy['page'], this);
+					 isProxy= assertParentChild(appletProxy['page'], this);
 				} else if (pageType !== 'component') {
 	                if (pageType === 'page') {
-	                    appletProxy[pageType] = getEnterPath(this, 'mp-weixin');
+	                    appletProxy[pageType] = getEnterPath(this, 'mp-toutiao');
 	                } else {
 	                    appletProxy[pageType] = true;
 	                }

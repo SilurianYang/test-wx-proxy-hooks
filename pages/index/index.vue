@@ -41,6 +41,7 @@
 		},
 		onLoad() {
 			console.log(`page--onLoad`)
+			console.log(this)
 		},
 		onReady(){
 			console.log(`page--onReady`)

@@ -80,15 +80,9 @@ export function getEnterPath(vueVim,platform) {
 
 export function assertParentChild(parentPath,vueVim) {
     while (vueVim.$parent != null) {
-        try {
-            const mpPage = vueVim.$parent.$mp;
-            if (mpPage.page && mpPage.page.is === parentPath) {
-                return true;
-            }
-        } catch (error) {
-            if(vueVim.$parent.$options?.mpInstance?.route===parentPath){
-                return true
-            }
+        const mpPage = vueVim.$parent.$mp;
+        if (mpPage.page && mpPage.page.is === parentPath) {
+            return true;
         }
         vueVim = vueVim.$parent;
     }
